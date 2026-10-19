@@ -20,9 +20,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07080b] text-[#e2e5eb] selection:bg-[#10b981]/30 selection:text-white font-modern-sans antialiased">
+    <div className="min-h-screen bg-[#07080b] text-[#e2e5eb] selection:bg-[#1b4332]/60 selection:text-white font-modern-sans antialiased">
       {/* Top Navigation */}
-      <Navbar brandName={profile.name} />
+      <Navbar brandName={profile.fullName} />
 
       {/* Hero Section */}
       <Hero
@@ -50,7 +50,7 @@ export default function App() {
       <ContactSection profile={profile} />
 
       {/* Footer */}
-      <Footer name={profile.name} />
+      <Footer name={profile.fullName} />
 
       {/* Venture Detail Modal */}
       <VentureDetailModal

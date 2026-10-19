@@ -22,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ name }) => {
             /
           </span>
           <span className="font-light text-neutral-400">
-            Computer Science & Enterprise Digital Operations
+            Computer Science & Co-Founder (Mreza Studio · Metrika)
           </span>
         </div>
 

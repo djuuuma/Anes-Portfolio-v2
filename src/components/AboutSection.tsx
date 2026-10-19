@@ -18,26 +18,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-emerald-400 mb-3">
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-luxury-green mb-3">
             ARCHITECT & FOUNDER
           </p>
-          <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-white leading-tight">
+          <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight">
             The Convergence of Code and Commercial Scale
           </h2>
-          <div className="w-12 h-[1px] bg-emerald-500/40 mx-auto mt-6" />
+          <div className="w-12 h-[1px] bg-[#2d5a3f]/60 mx-auto mt-6" />
         </div>
 
         {/* Narrative Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24">
           {/* Left Column: Lead Philosophy */}
           <div className="lg:col-span-5 space-y-6">
-            <p className="font-editorial-serif text-2xl sm:text-3xl text-neutral-200 leading-snug italic font-light">
+            <p className="font-editorial-serif text-2xl sm:text-3xl text-neutral-200 leading-snug font-normal">
               "{profile.bioLead}"
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onOpenStory}
-                className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.2em] text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer group"
+                className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.2em] text-luxury-green hover:text-luxury-green-bright transition-colors cursor-pointer group"
               >
                 <span>EXPLORE THE LIFE STORY</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -58,8 +58,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
         {/* Dual Foundation Cards: Computer Science Rigor vs. Agency Velocity */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {/* Pillar 1: Computer Science */}
-          <div className="p-8 sm:p-10 rounded-xl bg-[#0d1017] border border-white/[0.08] hover:border-emerald-500/30 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-emerald-950/40 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6">
+          <div className="p-8 sm:p-10 rounded-xl bg-[#0d1017] border border-white/[0.08] hover:border-[#386b4d]/50 transition-all group">
+            <div className="w-10 h-10 rounded-lg bg-[#091b12]/90 border border-[#2b563c]/40 flex items-center justify-center text-luxury-green mb-6">
               <Terminal className="w-5 h-5" />
             </div>
             <h3 className="font-serif-luxury text-xl font-medium tracking-wider text-white mb-3">
@@ -78,22 +78,22 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           </div>
 
           {/* Pillar 2: Agency & Commercial Scale */}
-          <div className="p-8 sm:p-10 rounded-xl bg-[#0d1017] border border-white/[0.08] hover:border-emerald-500/30 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-emerald-950/40 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6">
+          <div className="p-8 sm:p-10 rounded-xl bg-[#0d1017] border border-white/[0.08] hover:border-[#386b4d]/50 transition-all group">
+            <div className="w-10 h-10 rounded-lg bg-[#091b12]/90 border border-[#2b563c]/40 flex items-center justify-center text-luxury-green mb-6">
               <Briefcase className="w-5 h-5" />
             </div>
             <h3 className="font-serif-luxury text-xl font-medium tracking-wider text-white mb-3">
-              Commercial Leverage & Agency Leadership
+              Agency Co-Founder & Digital Execution
             </h3>
             <p className="text-sm text-neutral-400 leading-relaxed font-light mb-6">
-              Translating technical depth into high-converting digital authority and revenue pipelines for enterprise clients. Leading teams, managing client relationships, and shipping high-stakes digital infrastructure.
+              Co-founding Mreza Studio and Metrika to engineer bespoke web platforms and direct-response digital infrastructure. Translating technical precision into high-converting digital authority, client growth, and reliable execution.
             </p>
             <div className="flex items-center gap-3 text-xs text-neutral-500 font-mono">
-              <span>High-Ticket Delivery</span>
+              <span>Mreza Studio</span>
               <span aria-hidden="true">·</span>
-              <span>Brand Authority</span>
+              <span>Metrika</span>
               <span aria-hidden="true">·</span>
-              <span>Operational SOPs</span>
+              <span>Web Architecture & Growth</span>
             </div>
           </div>
         </div>

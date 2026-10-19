@@ -12,13 +12,13 @@ export const LifeStoryTimeline: React.FC<LifeStoryTimelineProps> = ({ milestones
   const getCategoryIcon = (category: TimelineMilestone['category']) => {
     switch (category) {
       case 'academics':
-        return <GraduationCap className="w-4 h-4 text-emerald-400" />;
+        return <GraduationCap className="w-4 h-4 text-luxury-green" />;
       case 'agency':
-        return <Building2 className="w-4 h-4 text-emerald-400" />;
+        return <Building2 className="w-4 h-4 text-luxury-green" />;
       case 'software':
         return <Code2 className="w-4 h-4 text-[#60a5fa]" />;
       default:
-        return <Award className="w-4 h-4 text-emerald-400" />;
+        return <Award className="w-4 h-4 text-luxury-green" />;
     }
   };
 
@@ -28,10 +28,10 @@ export const LifeStoryTimeline: React.FC<LifeStoryTimelineProps> = ({ milestones
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
           <div>
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-emerald-400 mb-3">
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-luxury-green mb-3">
               JOURNEY & EVOLUTION
             </p>
-            <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-white leading-tight">
+            <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight">
               From Algorithmic Theory to Enterprise Reality
             </h2>
           </div>
@@ -52,7 +52,7 @@ export const LifeStoryTimeline: React.FC<LifeStoryTimelineProps> = ({ milestones
                   onClick={() => setActiveMilestoneId(idx)}
                   className={`w-full text-left p-6 rounded-xl border transition-all cursor-pointer flex items-start justify-between gap-4 ${
                     isActive
-                      ? 'bg-[#121622] border-emerald-500/40 shadow-xl'
+                      ? 'bg-[#121622] border-luxury-green shadow-xl'
                       : 'bg-[#0d1017]/70 border-white/[0.06] hover:bg-[#121622]/60 hover:border-white/15'
                   }`}
                 >
@@ -73,7 +73,7 @@ export const LifeStoryTimeline: React.FC<LifeStoryTimelineProps> = ({ milestones
                   </div>
                   <ChevronRight
                     className={`w-4 h-4 mt-1 transition-transform ${
-                      isActive ? 'text-emerald-400 translate-x-1' : 'text-neutral-600'
+                      isActive ? 'text-luxury-green translate-x-1' : 'text-neutral-600'
                     }`}
                   />
                 </button>
@@ -84,12 +84,12 @@ export const LifeStoryTimeline: React.FC<LifeStoryTimelineProps> = ({ milestones
           {/* Active Milestone Deep Dive / Right Column */}
           <div className="lg:col-span-7 bg-[#121622] border border-white/[0.08] rounded-2xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
             {/* Background Glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#163825]/20 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 space-y-8">
               {/* Header Info */}
               <div className="border-b border-white/[0.08] pb-6">
-                <div className="flex items-center gap-3 text-xs text-emerald-400 font-mono mb-2">
+                <div className="flex items-center gap-3 text-xs text-luxury-green font-mono mb-2">
                   <span>{milestones[activeMilestoneId].year}</span>
                   <span aria-hidden="true">·</span>
                   <span className="uppercase tracking-widest text-neutral-400">
@@ -100,7 +100,7 @@ export const LifeStoryTimeline: React.FC<LifeStoryTimelineProps> = ({ milestones
                   {milestones[activeMilestoneId].title}
                 </h3>
                 {milestones[activeMilestoneId].metrics && (
-                  <div className="inline-block text-xs font-medium text-emerald-300 bg-emerald-950/40 border border-emerald-500/30 px-3 py-1 rounded">
+                  <div className="inline-block text-xs font-medium bg-luxury-green-badge px-3 py-1 rounded">
                     {milestones[activeMilestoneId].metrics}
                   </div>
                 )}
@@ -119,7 +119,7 @@ export const LifeStoryTimeline: React.FC<LifeStoryTimelineProps> = ({ milestones
                 <ul className="space-y-3">
                   {milestones[activeMilestoneId].keyLearnings.map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-neutral-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#4a775a] mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}

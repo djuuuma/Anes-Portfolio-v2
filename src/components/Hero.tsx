@@ -26,8 +26,8 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Cinematic Seascape Backdrop (Canvas/SVG or custom photo) */}
       <CinematicBackground customImage={customImage} />
 
-      {/* Center Monumental Typography - lowered to clear head and frame the shoulders */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-2 sm:px-6 flex flex-col items-center justify-center text-center translate-y-24 sm:translate-y-32 md:translate-y-40 lg:translate-y-44">
+      {/* Center Monumental Typography - calibrated to rest directly across the shoulder line */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-2 sm:px-6 flex flex-col items-center justify-center text-center translate-y-6 sm:translate-y-8 md:translate-y-10 lg:translate-y-12">
         <div className="relative w-full flex items-center justify-center select-none pointer-events-none">
           <h1 className="font-cinzel text-[4.8rem] xs:text-[5.5rem] sm:text-8xl md:text-9xl xl:text-[11rem] 2xl:text-[12.5rem] font-medium tracking-[0.14em] sm:tracking-[0.24em] uppercase leading-none hero-text-white">
             {name}

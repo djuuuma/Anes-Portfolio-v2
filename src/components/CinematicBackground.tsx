@@ -16,7 +16,7 @@ export const CinematicBackground: React.FC<CinematicBackgroundProps> = ({
           <img
             src={customImage}
             alt="Hero Background"
-            className="w-full h-full object-cover object-top scale-100 transition-transform duration-1000 ease-out"
+            className="w-full h-full object-cover object-top scale-105 -translate-y-6 sm:-translate-y-10 md:-translate-y-12 transition-transform duration-1000 ease-out"
           />
         </div>
       ) : (

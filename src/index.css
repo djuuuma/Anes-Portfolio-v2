@@ -1,30 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Bodoni Moda", "Playfair Display", Georgia, serif;
-  --font-editorial: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-editorial: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Mona Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 }
 
 @layer utilities {
-  .font-serif-luxury {
-    font-family: "Cinzel", "Bodoni Moda", "Playfair Display", Georgia, serif;
-    font-weight: 500;
-  }
+  /* Hero Monumental Font - strictly preserved */
   .font-cinzel {
     font-family: "Cinzel", serif;
   }
-  .font-cormorant {
-    font-family: "Cormorant Garamond", Georgia, serif;
-  }
-  .font-italiana {
-    font-family: "Italiana", serif;
+
+  /* Rest of Website Headings & Accents: Modern, punchy, founder-driven display */
+  .font-serif-luxury {
+    font-family: "Mona Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.025em;
   }
   .font-editorial-serif {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.015em;
   }
   .font-modern-sans {
-    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-family: "Mona Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   }
   
   /* Clean solid white hero text with multi-layer drop shadow for crisp readability */
@@ -38,9 +36,42 @@
     -webkit-user-select: none;
   }
 
+  /* ─── Aristocratic British Racing Green / Dark Pine Luxury Palette ────── */
+  .text-luxury-green {
+    color: #7ea88f;
+  }
+  .text-luxury-green-bright {
+    color: #92bba3;
+  }
+  .text-luxury-green-deep {
+    color: #4a775a;
+  }
+  .bg-luxury-green-dark {
+    background-color: #0b2216;
+  }
+  .border-luxury-green {
+    border-color: rgba(62, 107, 79, 0.45);
+  }
+  .bg-luxury-green-button {
+    background-color: #0e271a;
+    border: 1px solid rgba(74, 128, 95, 0.45);
+    color: #e5efe7;
+    box-shadow: 0 8px 24px rgba(4, 16, 10, 0.6);
+  }
+  .bg-luxury-green-button:hover {
+    background-color: #143524;
+    border-color: rgba(105, 168, 129, 0.65);
+    color: #ffffff;
+  }
+  .bg-luxury-green-badge {
+    background-color: rgba(11, 31, 20, 0.7);
+    border: 1px solid rgba(62, 107, 79, 0.35);
+    color: #8bb39a;
+  }
+
   .luxury-emerald-sheen,
   .luxury-gold-sheen {
-    background: linear-gradient(135deg, #a7f3d0 0%, #10b981 50%, #064e3b 100%);
+    background: linear-gradient(135deg, #a8cdb6 0%, #4f8061 50%, #1b3d29 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

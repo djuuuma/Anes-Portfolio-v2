@@ -1,5 +1,12 @@
 export type VentureCategory = 'all' | 'agency' | 'software' | 'advisory';
 
+export interface VentureProject {
+  title: string;
+  description: string;
+  link: string;
+  tags: string[];
+}
+
 export interface VentureItem {
   id: string;
   name: string;
@@ -17,6 +24,7 @@ export interface VentureItem {
   techStack: string[];
   featuredLink?: string;
   accentColor: string;
+  projects?: VentureProject[];
 }
 
 export interface TimelineMilestone {
@@ -31,8 +39,10 @@ export interface TimelineMilestone {
 
 export interface UserProfile {
   name: string;
+  fullName: string;
   title: string;
   subtitles: string[];
+  location: string;
   bioLead: string;
   bioStory: string[];
   heroBackgroundMode: 'cinematic-canvas' | 'custom-url';
@@ -41,8 +51,8 @@ export interface UserProfile {
   socials: {
     github: string;
     linkedin: string;
-    twitter: string;
-    agencyUrl: string;
+    mrezaStudioUrl: string;
+    metrikaUrl: string;
   };
   metrics: {
     label: string;
@@ -54,9 +64,6 @@ export interface UserProfile {
 export interface InquiryFormData {
   fullName: string;
   email: string;
-  company: string;
-  projectType: string;
-  budgetRange: string;
-  timeline: string;
+  subject: string;
   message: string;
 }

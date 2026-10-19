@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Copy, ArrowUpRight, Send, Github, Linkedin, Twitter, Globe, Clock } from 'lucide-react';
+import { Check, Copy, ArrowUpRight, Send, Github, Linkedin, Globe, Clock, MapPin } from 'lucide-react';
 import { InquiryFormData, UserProfile } from '../types/portfolio';
 
 interface ContactSectionProps {
@@ -10,10 +10,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
   const [formData, setFormData] = useState<InquiryFormData>({
     fullName: '',
     email: '',
-    company: '',
-    projectType: 'High-Ticket Agency Project',
-    budgetRange: '$15k — $30k',
-    timeline: 'Immediate (Within 30 Days)',
+    subject: '',
     message: '',
   });
 
@@ -37,11 +34,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
     setErrorMsg('');
     setIsSubmitting(true);
 
-    // Simulate reliable executive dispatch
+    // Simulate sending / can also trigger mailto
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 800);
+    }, 700);
   };
 
   return (
@@ -49,36 +46,39 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-emerald-400 mb-3">
-            INITIATE DIALOGUE
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-luxury-green mb-3">
+            INITIATE CONTACT
           </p>
           <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-white leading-tight">
-            Direct Inquiries & Executive Engagements
+            Direct Inquiries & Collaboration
           </h2>
-          <div className="w-12 h-[1px] bg-emerald-500/40 mx-auto mt-6" />
+          <div className="w-12 h-[1px] bg-[#2d5a3f]/60 mx-auto mt-6" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Direct Channels & Retainer Availability */}
+          {/* Left Column: Direct Channels & Information */}
           <div className="lg:col-span-5 space-y-8">
             <div>
               <h3 className="font-serif-luxury text-2xl font-normal text-white mb-3">
-                Selective Engagements
+                Let's Build Together
               </h3>
               <p className="text-sm text-neutral-400 font-light leading-relaxed">
-                We accept a limited number of high-stakes agency client builds and technical software partnerships per quarter to ensure flawless execution and undivided attention.
+                Whether you're looking for bespoke web development via Mreza Studio, direct response marketing via Metrika, or technical engineering collaborations, my inbox is open.
               </p>
             </div>
 
             {/* Direct Email Card with 1-click copy */}
             <div className="p-6 rounded-xl bg-[#0f121a] border border-white/[0.08] space-y-3">
               <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400">
-                DIRECT EXECUTIVE INBOX
+                DIRECT INBOX
               </span>
               <div className="flex items-center justify-between gap-3">
-                <span className="font-mono text-sm sm:text-base text-neutral-200 truncate">
+                <a
+                  href={`mailto:${profile.contactEmail}`}
+                  className="font-mono text-sm sm:text-base text-neutral-200 hover:text-luxury-green transition-colors truncate"
+                >
                   {profile.contactEmail}
-                </span>
+                </a>
                 <button
                   onClick={copyEmail}
                   className="px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-xs text-neutral-300 hover:text-white transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer"
@@ -86,12 +86,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                 >
                   {copied ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-emerald-400" />
-                      <span className="text-emerald-400">Copied</span>
+                      <Check className="w-3.5 h-3.5 text-luxury-green" />
+                      <span className="text-luxury-green">Copied</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3.5 h-3.5 text-emerald-400" />
+                      <Copy className="w-3.5 h-3.5 text-luxury-green" />
                       <span>Copy</span>
                     </>
                   )}
@@ -99,16 +99,22 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
               </div>
             </div>
 
-            {/* Availability Status */}
-            <div className="flex items-center gap-3 p-4 rounded-xl bg-[#0f121a] border border-white/[0.08] text-xs text-neutral-300 font-mono">
-              <Clock className="w-4 h-4 text-emerald-400" />
-              <span>Current Capacity: 2 Client Engagements Available for Q2/Q3</span>
+            {/* Location & Availability Status */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-[#0f121a] border border-white/[0.08] text-xs text-neutral-300 font-mono">
+                <MapPin className="w-4 h-4 text-luxury-green shrink-0" />
+                <span>{profile.location}</span>
+              </div>
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-[#0f121a] border border-white/[0.08] text-xs text-neutral-300 font-mono">
+                <Clock className="w-4 h-4 text-luxury-green shrink-0" />
+                <span>Open to selective client projects & collaborations</span>
+              </div>
             </div>
 
             {/* Social Channels */}
             <div>
               <span className="text-xs uppercase tracking-[0.2em] font-semibold text-neutral-400 block mb-4">
-                EXTERNAL NETWORKS & REPOSITORIES
+                CHANNELS & PLATFORMS
               </span>
               <div className="grid grid-cols-2 gap-3">
                 <a
@@ -118,7 +124,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                   className="p-3 rounded-lg bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors flex items-center justify-between text-xs text-neutral-300 hover:text-white"
                 >
                   <span className="flex items-center gap-2">
-                    <Linkedin className="w-3.5 h-3.5 text-emerald-400" />
+                    <Linkedin className="w-3.5 h-3.5 text-luxury-green" />
                     <span>LinkedIn</span>
                   </span>
                   <ArrowUpRight className="w-3 h-3 text-neutral-500" />
@@ -131,34 +137,34 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                   className="p-3 rounded-lg bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors flex items-center justify-between text-xs text-neutral-300 hover:text-white"
                 >
                   <span className="flex items-center gap-2">
-                    <Github className="w-3.5 h-3.5 text-emerald-400" />
+                    <Github className="w-3.5 h-3.5 text-luxury-green" />
                     <span>GitHub</span>
                   </span>
                   <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                 </a>
 
                 <a
-                  href={profile.socials.twitter}
+                  href={profile.socials.mrezaStudioUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors flex items-center justify-between text-xs text-neutral-300 hover:text-white"
                 >
                   <span className="flex items-center gap-2">
-                    <Twitter className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>X / Twitter</span>
+                    <Globe className="w-3.5 h-3.5 text-luxury-green" />
+                    <span>Mreza Studio</span>
                   </span>
                   <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                 </a>
 
                 <a
-                  href={profile.socials.agencyUrl}
+                  href={profile.socials.metrikaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors flex items-center justify-between text-xs text-neutral-300 hover:text-white"
                 >
                   <span className="flex items-center gap-2">
-                    <Globe className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Agency Site</span>
+                    <Globe className="w-3.5 h-3.5 text-[#60a5fa]" />
+                    <span>Metrika</span>
                   </span>
                   <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                 </a>
@@ -166,18 +172,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
             </div>
           </div>
 
-          {/* Right Column: Inquiry Form */}
+          {/* Right Column: Direct Contact Form */}
           <div className="lg:col-span-7 bg-[#0f121a] border border-white/[0.08] rounded-2xl p-8 sm:p-10 shadow-2xl relative">
             {submitted ? (
               <div className="py-12 text-center space-y-6 animate-in fade-in duration-300">
-                <div className="w-14 h-14 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mx-auto text-emerald-400">
+                <div className="w-14 h-14 rounded-full bg-[#0a1e14] border border-[#234d35]/60 flex items-center justify-center mx-auto text-luxury-green">
                   <Check className="w-7 h-7" />
                 </div>
                 <h3 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-white">
-                  Inquiry Dispatched
+                  Message Dispatched
                 </h3>
                 <p className="text-sm text-neutral-300 max-w-md mx-auto font-light leading-relaxed">
-                  Thank you, {formData.fullName}. Your brief has been routed to Anes's direct inbox. We review qualified inquiries within 24–48 hours.
+                  Thank you, {formData.fullName}. Your note has been delivered. I will respond to your email ({formData.email}) shortly.
                 </p>
                 <button
                   onClick={() => {
@@ -185,26 +191,23 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     setFormData({
                       fullName: '',
                       email: '',
-                      company: '',
-                      projectType: 'High-Ticket Agency Project',
-                      budgetRange: '$15k — $30k',
-                      timeline: 'Immediate (Within 30 Days)',
+                      subject: '',
                       message: '',
                     });
                   }}
                   className="px-6 py-2.5 bg-white/10 hover:bg-white/15 text-xs text-neutral-200 tracking-wider uppercase rounded transition-colors cursor-pointer"
                 >
-                  Submit Another Inquiry
+                  Send Another Message
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="border-b border-white/[0.08] pb-4 mb-6">
                   <h3 className="font-serif-luxury text-xl font-medium text-white mb-1">
-                    Project & Collaboration Brief
+                    Send a Direct Note
                   </h3>
                   <p className="text-xs text-neutral-400 font-light">
-                    Provide project context, anticipated timeline, and objectives.
+                    Have a project in mind or want to discuss an engagement? Reach out directly.
                   </p>
                 </div>
 
@@ -217,121 +220,70 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
-                      Full Name *
+                      Your Name *
                     </label>
                     <input
                       type="text"
                       required
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      placeholder="e.g. Marcus Aurelius"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600"
+                      placeholder="e.g. Sarah Jenkins"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
-                      Work Email *
+                      Email Address *
                     </label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="marcus@company.com"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600"
+                      placeholder="sarah@example.com"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
                     />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
-                      Company / Venture
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      placeholder="Enterprise / Startup Name"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
-                      Engagement Category
-                    </label>
-                    <select
-                      value={formData.projectType}
-                      onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors cursor-pointer"
-                    >
-                      <option value="High-Ticket Agency Project">High-Ticket Agency Project</option>
-                      <option value="Software Architecture & Platform Build">Software Architecture & Platform Build</option>
-                      <option value="Technical Advisory / Board">Technical Advisory / Board</option>
-                      <option value="Keynote Speaking / Media">Keynote Speaking / Media</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
-                      Budget Scope
-                    </label>
-                    <select
-                      value={formData.budgetRange}
-                      onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors cursor-pointer"
-                    >
-                      <option value="$15k — $30k">$15k — $30k (Foundational)</option>
-                      <option value="$30k — $60k">$30k — $60k (Enterprise Tier)</option>
-                      <option value="$60k+">$60k+ (Comprehensive Agency Retainer)</option>
-                      <option value="Advisory / Equity">Advisory / Equity Agreement</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
-                      Target Timeline
-                    </label>
-                    <select
-                      value={formData.timeline}
-                      onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors cursor-pointer"
-                    >
-                      <option value="Immediate (Within 30 Days)">Immediate (Within 30 Days)</option>
-                      <option value="Next Quarter">Next Quarter</option>
-                      <option value="Flexible / Strategic Planning">Flexible / Strategic Planning</option>
-                    </select>
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
-                    Project Overview & Objectives *
+                    Subject / Topic
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    placeholder="e.g. Mreza Studio Web Platform / Metrika Direct Response"
+                    className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
+                    Your Message *
                   </label>
                   <textarea
                     required
-                    rows={4}
+                    rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Describe your current bottlenecks, target deliverables, or architectural vision..."
-                    className="w-full px-4 py-3 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600 resize-none font-light"
+                    placeholder="Share details about what you'd like to collaborate on..."
+                    className="w-full px-4 py-3 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600 resize-none font-light"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-semibold tracking-[0.2em] uppercase rounded transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-emerald-950/40 disabled:opacity-50"
+                  className="w-full py-4 bg-luxury-green-button text-xs font-semibold tracking-[0.24em] uppercase rounded transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? (
-                    <span>DISPATCHING...</span>
+                    <span>SENDING...</span>
                   ) : (
                     <>
-                      <span>TRANSMIT EXECUTIVE BRIEF</span>
+                      <span>TRANSMIT MESSAGE</span>
                       <Send className="w-3.5 h-3.5" />
                     </>
                   )}

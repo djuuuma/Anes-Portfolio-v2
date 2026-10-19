@@ -100,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-xs font-medium tracking-[0.25em] text-neutral-200 hover:text-emerald-400 transition-colors py-2"
+                className="text-xs font-medium tracking-[0.25em] text-neutral-200 hover:text-luxury-green transition-colors py-2"
               >
                 {link.label}
               </a>
