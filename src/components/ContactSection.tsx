@@ -42,46 +42,46 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
   };
 
   return (
-    <section id="contact" className="py-28 md:py-36 bg-[#090b10] border-t border-white/[0.06] relative">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+    <section id="contact" className="py-16 sm:py-24 md:py-36 bg-[#090b10] border-t border-white/[0.06] relative">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-20">
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-luxury-green mb-3">
             INITIATE CONTACT
           </p>
-          <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-white leading-tight">
+          <h2 className="font-serif-luxury text-2xl sm:text-4xl md:text-5xl font-normal tracking-wide text-white leading-tight">
             Direct Inquiries & Collaboration
           </h2>
-          <div className="w-12 h-[1px] bg-[#2d5a3f]/60 mx-auto mt-6" />
+          <div className="w-12 h-[1px] bg-[#2d5a3f]/60 mx-auto mt-5 sm:mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left Column: Direct Channels & Information */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
             <div>
-              <h3 className="font-serif-luxury text-2xl font-normal text-white mb-3">
+              <h3 className="font-serif-luxury text-xl sm:text-2xl font-normal text-white mb-3">
                 Let's Build Together
               </h3>
-              <p className="text-sm text-neutral-400 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
                 Whether you're looking for bespoke web development via Mreza Studio, direct response marketing via Metrika, or technical engineering collaborations, my inbox is open.
               </p>
             </div>
 
             {/* Direct Email Card with 1-click copy */}
-            <div className="p-6 rounded-xl bg-[#0f121a] border border-white/[0.08] space-y-3">
+            <div className="p-5 sm:p-6 rounded-xl bg-[#0f121a] border border-white/[0.08] space-y-3">
               <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400">
                 DIRECT INBOX
               </span>
               <div className="flex items-center justify-between gap-3">
                 <a
                   href={`mailto:${profile.contactEmail}`}
-                  className="font-mono text-sm sm:text-base text-neutral-200 hover:text-luxury-green transition-colors truncate"
+                  className="font-mono text-xs sm:text-base text-neutral-200 hover:text-luxury-green transition-colors truncate"
                 >
                   {profile.contactEmail}
                 </a>
                 <button
                   onClick={copyEmail}
-                  className="px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-xs text-neutral-300 hover:text-white transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer"
+                  className="min-h-[44px] px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/10 active:scale-95 text-xs text-neutral-300 hover:text-white transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                   title="Copy email address"
                 >
                   {copied ? (

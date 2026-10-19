@@ -16,19 +16,22 @@ export const VentureDetailModal: React.FC<VentureDetailModalProps> = ({
   if (!venture) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity"
         onClick={onClose}
       />
 
-      {/* Modal Dialog */}
-      <div className="relative w-full max-w-3xl bg-[#0c0f16] border border-white/10 rounded-2xl shadow-2xl p-6 sm:p-10 z-10 my-8 max-h-[90vh] overflow-y-auto">
+      {/* Modal Dialog / Mobile Bottom Sheet */}
+      <div className="relative w-full max-w-3xl bg-[#0c0f16] border-t sm:border border-white/10 rounded-t-3xl sm:rounded-2xl shadow-2xl p-5 sm:p-10 z-10 max-h-[88vh] sm:max-h-[90vh] overflow-y-auto animate-in slide-in-from-bottom-6 sm:slide-in-from-bottom-0 duration-300">
+        {/* Mobile Pull Handle Indicator */}
+        <div className="w-12 h-1.5 rounded-full bg-white/20 mx-auto mb-4 sm:hidden" />
+
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-2 rounded-lg text-neutral-400 hover:text-white bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+          className="absolute top-4 sm:top-6 right-4 sm:right-6 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-neutral-400 hover:text-white bg-white/5 hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -176,19 +179,19 @@ export const VentureDetailModal: React.FC<VentureDetailModalProps> = ({
         </div>
 
         {/* Action Footer */}
-        <div className="pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <button
             onClick={() => {
               onClose();
               onInquire();
             }}
-            className="w-full sm:w-auto px-7 py-3 bg-luxury-green-button text-xs font-semibold tracking-wider uppercase rounded transition-all cursor-pointer"
+            className="w-full sm:w-auto min-h-[48px] px-7 py-3 bg-luxury-green-button text-xs font-semibold tracking-wider uppercase rounded-xl sm:rounded transition-all active:scale-[0.98] cursor-pointer"
           >
             DISCUSS PROJECT OR ENGAGEMENT
           </button>
           <button
             onClick={onClose}
-            className="w-full sm:w-auto px-5 py-2.5 text-xs text-neutral-400 hover:text-white transition-colors cursor-pointer"
+            className="w-full sm:w-auto min-h-[44px] px-5 py-2.5 text-xs text-neutral-400 hover:text-white transition-colors cursor-pointer flex items-center justify-center"
           >
             CLOSE
           </button>

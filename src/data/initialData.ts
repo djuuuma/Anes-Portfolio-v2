@@ -182,17 +182,31 @@ export const initialMilestones: TimelineMilestone[] = [
     metrics: 'Shipped Multiple Enterprise & Clinic Platforms',
   },
   {
-    year: '2025 — Present',
-    phase: 'Studio Launch & Agency Expansion',
-    title: 'Co-Founding Mreza Studio & Establishing Metrika',
+    year: '2025',
+    phase: 'Agency Inception',
+    title: 'Co-Founding Mreza Studio',
     category: 'agency',
     description:
-      'In 2025, Anes and Benjamin founded Mreza Studio, delivering bespoke web platforms and design systems. In 2026, Anes established Metrika with James and Edhem to drive direct response marketing, funnel optimization, and growth analytics.',
+      'In 2025, Anes and Benjamin founded Mreza Studio as a specialized web development agency, engineering bespoke Next.js and React platforms, high-end design systems, and digital infrastructure for ambitious businesses.',
     keyLearnings: [
-      'Founding and scaling specialized agency partnerships',
+      'Founding and structuring a specialized web development studio',
+      'Delivering high-converting, accessible user interfaces with motion architecture',
+      'Establishing standard operating procedures (SOPs) for rapid client delivery',
+    ],
+    metrics: 'Founded Mreza Studio with Benjamin',
+  },
+  {
+    year: '2026 — Present',
+    phase: 'Agency Expansion & Growth',
+    title: 'Establishing Metrika & Growth Infrastructure',
+    category: 'agency',
+    description:
+      'In 2026, Anes established Metrika with James and Edhem, expanding into direct response marketing, conversion funnel optimization, and data-driven client acquisition alongside ongoing CS studies and web architecture.',
+    keyLearnings: [
       'Direct response marketing and conversion rate optimization (CRO)',
+      'Structuring paid acquisition funnels and analytics tracking pipelines',
       'Multiplying engineering velocity through autonomous agentic AI workflows',
     ],
-    metrics: 'Co-Founder of Mreza Studio & Metrika',
+    metrics: 'Established Metrika with James & Edhem',
   },
 ];
