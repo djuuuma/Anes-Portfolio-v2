@@ -225,7 +225,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="e.g. Marcus Aurelius"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-neutral-600"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600"
                     />
                   </div>
 
@@ -239,7 +239,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="marcus@company.com"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-neutral-600"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600"
                     />
                   </div>
                 </div>
@@ -254,7 +254,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="Enterprise / Startup Name"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-neutral-600"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600"
                     />
                   </div>
 
@@ -265,7 +265,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     <select
                       value={formData.projectType}
                       onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors cursor-pointer"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors cursor-pointer"
                     >
                       <option value="High-Ticket Agency Project">High-Ticket Agency Project</option>
                       <option value="Software Architecture & Platform Build">Software Architecture & Platform Build</option>
@@ -283,7 +283,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     <select
                       value={formData.budgetRange}
                       onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors cursor-pointer"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors cursor-pointer"
                     >
                       <option value="$15k — $30k">$15k — $30k (Foundational)</option>
                       <option value="$30k — $60k">$30k — $60k (Enterprise Tier)</option>
@@ -299,7 +299,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     <select
                       value={formData.timeline}
                       onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors cursor-pointer"
+                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors cursor-pointer"
                     >
                       <option value="Immediate (Within 30 Days)">Immediate (Within 30 Days)</option>
                       <option value="Next Quarter">Next Quarter</option>
@@ -318,14 +318,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe your current bottlenecks, target deliverables, or architectural vision..."
-                    className="w-full px-4 py-3 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors placeholder:text-neutral-600 resize-none font-light"
+                    className="w-full px-4 py-3 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-neutral-600 resize-none font-light"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 bg-[#e5c07b] hover:bg-[#d4af37] text-neutral-950 text-xs font-semibold tracking-[0.2em] uppercase rounded transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-50"
+                  className="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-semibold tracking-[0.2em] uppercase rounded transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-emerald-950/40 disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <span>DISPATCHING...</span>
