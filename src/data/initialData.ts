@@ -53,14 +53,16 @@ export const initialVentures: VentureItem[] = [
     tagline: 'Bespoke Web Development, Next.js/React Platforms & High-End Design',
     category: 'agency',
     role: 'Co-Founder & Web Architect',
-    timeline: '2024 — Present',
-    status: 'Active / Client Engagements',
+    timeline: '2025 — Present',
+    status: 'Active / Scaling',
+    shortDescription:
+      'In 2025, Anes and Benjamin founded Mreza Studio, a web development agency specializing in bespoke Next.js and React web platforms, high-end design, and scalable digital solutions for ambitious businesses.',
     keyMetric: {
       label: 'Client Platforms Shipped',
       value: '5+ Live',
     },
     overview:
-      'A boutique digital and web engineering studio partnering with ambitious companies, clinics, and hospitality brands. We craft bespoke Next.js and React web platforms, high-conversion design systems, and digital menus that elevate brand prestige and client conversions.',
+      'A boutique digital and web engineering studio founded by Anes and Benjamin. We craft bespoke Next.js and React web platforms, high-conversion design systems, and digital menus that elevate brand prestige and client conversions.',
     deliverables: [
       'Custom Next.js & React enterprise web platforms',
       'High-converting UI/UX design systems with motion architecture',
@@ -114,14 +116,16 @@ export const initialVentures: VentureItem[] = [
     tagline: 'Direct Response Marketing, Growth, Analytics & Digital Infrastructure',
     category: 'agency',
     role: 'Co-Founder & Technical Growth Lead',
-    timeline: '2025 — Present',
+    timeline: '2026 — Present',
     status: 'Active / Scaling',
+    shortDescription:
+      'In 2026, Anes established Metrika with James and Edhem, a marketing agency specializing in direct response marketing, conversion funnel optimization, and data-driven growth infrastructure.',
     keyMetric: {
       label: 'Core Focus',
       value: 'Direct Response & ROI',
     },
     overview:
-      'A performance and direct-response marketing agency engineered to accelerate customer acquisition. We build high-converting landing funnels, configure comprehensive analytics pipelines, and execute direct-response paid campaigns that turn traffic into measurable revenue.',
+      'A performance and direct-response marketing agency established by Anes with James and Edhem, engineered to accelerate customer acquisition. We build high-converting landing funnels, configure comprehensive analytics pipelines, and execute direct-response paid campaigns that turn traffic into measurable revenue.',
     deliverables: [
       'Direct response marketing funnels & conversion-focused landing pages',
       'Analytics tracking, event attribution & conversion rate optimization (CRO)',
@@ -165,30 +169,30 @@ export const initialMilestones: TimelineMilestone[] = [
   },
   {
     year: '2024',
-    phase: 'Agency Inception',
-    title: 'Co-Founding Mreza Studio & Expanding Client Footprint',
-    category: 'agency',
+    phase: 'Production Scale',
+    title: 'High-Fidelity Client Platforms & Studio Preparation',
+    category: 'software',
     description:
-      "Co-founded Mreza Studio as a boutique web engineering firm. Delivered flagship web platforms for Dr. Sanela Kapić dental clinic, Foto Đumišić photography studio, and MSN Design, establishing a reputation for design craft and technical reliability.",
+      'Engineered and shipped flagship client platforms including Dr. Sanela Kapić dental clinic, Foto Đumišić photography studio, and MSN Design. Refined reusable design systems and high-converting frontend architectures.',
     keyLearnings: [
-      'Founding and structuring agency delivery pipelines',
-      'Executing client agreements and managing stakeholder expectations',
-      'Engineering high-converting, accessible user interfaces with motion architecture',
+      'Multi-stakeholder delivery pipelines and client governance',
+      'Image optimization and SEO strategy for commercial clients',
+      'Laying the foundations for dedicated studio and agency operations',
     ],
-    metrics: 'Co-Founded Mreza Studio & Delivered Multiple Enterprise Platforms',
+    metrics: 'Shipped Multiple Enterprise & Clinic Platforms',
   },
   {
     year: '2025 — Present',
-    phase: 'Expansion & Synergy',
-    title: 'Co-Founding Metrika & Agentic Web Engineering',
+    phase: 'Studio Launch & Agency Expansion',
+    title: 'Co-Founding Mreza Studio & Establishing Metrika',
     category: 'agency',
     description:
-      'Co-founded Metrika to pair high-end web platforms with direct response marketing and growth analytics. Integrating modern agentic AI workflows and autonomous coding tools to multiply development velocity across both agencies and senior CS studies.',
+      'In 2025, Anes and Benjamin founded Mreza Studio, delivering bespoke web platforms and design systems. In 2026, Anes established Metrika with James and Edhem to drive direct response marketing, funnel optimization, and growth analytics.',
     keyLearnings: [
+      'Founding and scaling specialized agency partnerships',
       'Direct response marketing and conversion rate optimization (CRO)',
-      'Leveraging autonomous agentic AI tools for accelerated engineering',
-      'Managing synergies between web engineering (Mreza) and growth marketing (Metrika)',
+      'Multiplying engineering velocity through autonomous agentic AI workflows',
     ],
-    metrics: 'Co-Founder of 2 Specialized Agencies & Active CS Studies',
+    metrics: 'Co-Founder of Mreza Studio & Metrika',
   },
 ];

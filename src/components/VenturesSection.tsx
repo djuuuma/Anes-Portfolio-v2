@@ -97,34 +97,14 @@ export const VenturesSection: React.FC<VenturesSectionProps> = ({
                   <span className="text-neutral-500">{venture.timeline}</span>
                 </div>
 
-                {/* Title & Tagline */}
+                {/* Title */}
                 <h3 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-white tracking-wide group-hover:text-luxury-green-bright transition-colors mb-3">
                   {venture.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-6">
-                  {venture.tagline}
-                </p>
 
-                {/* Key Metric Feature */}
-                <div className="p-4 sm:p-5 rounded-xl bg-black/40 border border-white/[0.05] mb-6 flex items-center justify-between">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-neutral-400 block mb-1">
-                      {venture.keyMetric.label}
-                    </span>
-                    <span className="font-serif-luxury text-2xl sm:text-3xl font-bold text-white tabular-nums tracking-wide">
-                      {venture.keyMetric.value}
-                    </span>
-                  </div>
-                  {venture.projects && (
-                    <span className="text-xs font-mono text-luxury-green bg-[#0d2318] px-2.5 py-1 rounded border border-[#2b563c]/40">
-                      {venture.projects.length} Shipped Cases
-                    </span>
-                  )}
-                </div>
-
-                {/* Overview preview */}
-                <p className="text-xs text-neutral-400 font-light line-clamp-2 mb-6">
-                  {venture.overview}
+                {/* Short Description */}
+                <p className="text-sm text-neutral-300 font-light leading-relaxed mb-6">
+                  {venture.shortDescription || venture.overview}
                 </p>
               </div>
 

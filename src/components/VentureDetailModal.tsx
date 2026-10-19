@@ -63,7 +63,7 @@ export const VentureDetailModal: React.FC<VentureDetailModalProps> = ({
             )}
           </div>
           <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
-            {venture.tagline}
+            {venture.shortDescription || venture.tagline}
           </p>
         </div>
 

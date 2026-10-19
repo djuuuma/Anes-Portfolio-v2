@@ -15,7 +15,8 @@ export interface VentureItem {
   role: string;
   timeline: string;
   status: string;
-  keyMetric: {
+  shortDescription: string;
+  keyMetric?: {
     label: string;
     value: string;
   };
