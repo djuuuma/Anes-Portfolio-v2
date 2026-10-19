@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
@@ -6,16 +6,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { label: 'ABOUT', href: '#about' },
@@ -25,13 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#07080b]/90 backdrop-blur-md border-b border-white/[0.08] py-3.5 sm:py-4 shadow-xl'
-          : 'bg-transparent py-5 sm:py-8'
-      }`}
-    >
+    <header className="absolute top-0 inset-x-0 z-40 bg-transparent py-5 sm:py-8">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
         {/* Left Balanced Spacer */}
         <div className="hidden lg:block w-1/4" />

@@ -71,20 +71,22 @@ export const VentureDetailModal: React.FC<VentureDetailModalProps> = ({
         </div>
 
         {/* Primary Metric Banner */}
-        <div className="p-6 rounded-xl bg-[#131722] border border-white/[0.08] mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <span className="text-xs uppercase tracking-widest text-neutral-400 block mb-1">
-              {venture.keyMetric.label}
-            </span>
-            <span className="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tabular-nums tracking-wide">
-              {venture.keyMetric.value}
-            </span>
+        {venture.keyMetric && (
+          <div className="p-5 sm:p-6 rounded-xl bg-[#131722] border border-white/[0.08] mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span className="text-xs uppercase tracking-widest text-neutral-400 block mb-1">
+                {venture.keyMetric.label}
+              </span>
+              <span className="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tabular-nums tracking-wide">
+                {venture.keyMetric.value}
+              </span>
+            </div>
+            <div className="text-xs text-neutral-300 font-mono flex items-center gap-2">
+              <UserCheck className="w-4 h-4 text-luxury-green" />
+              <span>Role: {venture.role}</span>
+            </div>
           </div>
-          <div className="text-xs text-neutral-300 font-mono flex items-center gap-2">
-            <UserCheck className="w-4 h-4 text-luxury-green" />
-            <span>Role: {venture.role}</span>
-          </div>
-        </div>
+        )}
 
         {/* Overview */}
         <div className="space-y-3 mb-8 text-neutral-300 font-light text-sm sm:text-base leading-relaxed">

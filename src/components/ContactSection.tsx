@@ -217,7 +217,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-neutral-400 mb-2">
                       Your Name *
@@ -228,7 +228,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="e.g. Sarah Jenkins"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
+                      className="w-full px-4 py-3 sm:py-2.5 bg-[#090b10] border border-white/10 rounded-lg text-base sm:text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
                     />
                   </div>
 
@@ -242,7 +242,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="sarah@example.com"
-                      className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
+                      className="w-full px-4 py-3 sm:py-2.5 bg-[#090b10] border border-white/10 rounded-lg text-base sm:text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
                     />
                   </div>
                 </div>
@@ -256,7 +256,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="e.g. Mreza Studio Web Platform / Metrika Direct Response"
-                    className="w-full px-4 py-2.5 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
+                    className="w-full px-4 py-3 sm:py-2.5 bg-[#090b10] border border-white/10 rounded-lg text-base sm:text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600"
                   />
                 </div>
 
@@ -270,14 +270,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Share details about what you'd like to collaborate on..."
-                    className="w-full px-4 py-3 bg-[#090b10] border border-white/10 rounded text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600 resize-none font-light"
+                    className="w-full px-4 py-3 bg-[#090b10] border border-white/10 rounded-lg text-base sm:text-sm text-white focus:outline-none focus:border-[#386b4d] transition-colors placeholder:text-neutral-600 resize-none font-light"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-luxury-green-button text-xs font-semibold tracking-[0.24em] uppercase rounded transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full min-h-[48px] py-3.5 sm:py-4 bg-luxury-green-button text-xs font-semibold tracking-[0.24em] uppercase rounded-xl sm:rounded transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98] disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <span>SENDING...</span>

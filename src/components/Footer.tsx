@@ -11,10 +11,10 @@ export const Footer: React.FC<FooterProps> = ({ name }) => {
   };
 
   return (
-    <footer className="py-16 bg-[#050608] border-t border-white/[0.05] text-neutral-500 text-xs">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer className="py-12 sm:py-16 bg-[#050608] border-t border-white/[0.05] text-neutral-500 text-xs">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
         {/* Brand & Note */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
           <span className="font-serif-luxury text-sm font-semibold tracking-[0.25em] text-neutral-200">
             {name}
           </span>
@@ -27,17 +27,17 @@ export const Footer: React.FC<FooterProps> = ({ name }) => {
         </div>
 
         {/* Quick Nav Links */}
-        <div className="flex items-center gap-6 text-[11px] tracking-[0.2em] font-medium text-neutral-400">
-          <a href="#about" className="hover:text-white transition-colors">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] tracking-[0.2em] font-medium text-neutral-400">
+          <a href="#about" className="hover:text-white transition-colors py-1">
             ABOUT
           </a>
-          <a href="#story" className="hover:text-white transition-colors">
+          <a href="#story" className="hover:text-white transition-colors py-1">
             LIFE STORY
           </a>
-          <a href="#ventures" className="hover:text-white transition-colors">
+          <a href="#ventures" className="hover:text-white transition-colors py-1">
             VENTURES
           </a>
-          <a href="#contact" className="hover:text-white transition-colors">
+          <a href="#contact" className="hover:text-white transition-colors py-1">
             CONTACT
           </a>
         </div>
@@ -45,14 +45,14 @@ export const Footer: React.FC<FooterProps> = ({ name }) => {
         {/* Scroll To Top */}
         <button
           onClick={scrollToTop}
-          className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-colors cursor-pointer"
+          className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 rounded-full bg-white/5 hover:bg-white/10 active:scale-95 text-neutral-400 hover:text-white transition-all cursor-pointer"
           aria-label="Scroll to top of page"
         >
           <ArrowUp className="w-4 h-4" />
         </button>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 mt-8 pt-8 border-t border-white/[0.03] text-center text-[11px] text-neutral-600 font-mono">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/[0.03] text-center text-[11px] text-neutral-600 font-mono">
         © {new Date().getFullYear()} {name}. All rights reserved. Architected with precision.
       </div>
     </footer>

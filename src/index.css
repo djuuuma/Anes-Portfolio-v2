@@ -104,3 +104,16 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #394254;
 }
+
+/* Mobile Touch & Viewport Enhancements */
+html {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Support iOS safe area insets */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
