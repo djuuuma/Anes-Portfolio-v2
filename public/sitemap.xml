@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.anesdjumisic.online/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.anesdjumisic.online/anes-sarajevo.webp</image:loc>
+      <image:title>Anes Đumišić — Computer Science &amp; Agency Co-Founder</image:title>
+      <image:caption>Portrait of Anes Đumišić in Sarajevo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.anesdjumisic.online/og-image.jpg</image:loc>
+      <image:title>Anes Đumišić — Portfolio &amp; Ventures</image:title>
+      <image:caption>Anes Đumišić — Co-founder of Mreza Studio &amp; Metrika</image:caption>
+    </image:image>
+  </url>
+</urlset>

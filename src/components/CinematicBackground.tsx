@@ -15,7 +15,11 @@ export const CinematicBackground: React.FC<CinematicBackgroundProps> = ({
         <div className="absolute inset-0 w-full h-full">
           <img
             src={customImage}
-            alt="Hero Background"
+            alt="Anes Đumišić — Computer Science student and agency co-founder in Sarajevo"
+            fetchPriority="high"
+            decoding="async"
+            width={1920}
+            height={1080}
             className="w-full h-full object-cover object-top scale-105 -translate-y-6 sm:-translate-y-10 md:-translate-y-12 transition-transform duration-1000 ease-out"
           />
         </div>

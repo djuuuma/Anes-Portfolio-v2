@@ -109,6 +109,8 @@ export const VentureDetailModal: React.FC<VentureDetailModalProps> = ({
                   href={proj.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title={`Visit live platform: ${proj.title}`}
+                  aria-label={`Visit live platform: ${proj.title}`}
                   className="group/card p-4 rounded-xl bg-[#12151e] border border-white/[0.07] hover:border-luxury-green/60 hover:bg-[#161a25] transition-all flex flex-col justify-between"
                 >
                   <div>

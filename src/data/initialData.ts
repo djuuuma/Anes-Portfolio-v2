@@ -14,7 +14,7 @@ export const initialProfile: UserProfile = {
     'Balancing demanding computer science studies with co-founding and operating two specialized digital agencies has forged an obsession with operating discipline, first-principles problem solving, and relentless craftsmanship.',
   ],
   heroBackgroundMode: 'custom-url',
-  customHeroUrl: '/anes-sarajevo.jpg',
+  customHeroUrl: '/anes-sarajevo.webp',
   contactEmail: 'djumisic.anes@gmail.com',
   socials: {
     github: 'https://github.com/djuuuma',

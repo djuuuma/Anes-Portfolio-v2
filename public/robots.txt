@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# XML Sitemap
+Sitemap: https://www.anesdjumisic.online/sitemap.xml

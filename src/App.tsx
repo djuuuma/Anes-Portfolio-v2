@@ -12,7 +12,7 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   const profile = initialProfile;
-  const heroImage = '/anes-sarajevo.jpg';
+  const heroImage = '/anes-sarajevo.webp';
   const [selectedVenture, setSelectedVenture] = useState<VentureItem | null>(null);
 
   const scrollToSection = (id: string) => {

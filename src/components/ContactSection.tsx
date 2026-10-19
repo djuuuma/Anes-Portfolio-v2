@@ -288,6 +288,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile }) => {
                     </>
                   )}
                 </button>
+
+                <p className="text-[11px] text-neutral-500 text-center font-mono tracking-tight pt-1">
+                  Inquiries delivered directly to Anes Đumišić. Your data is strictly confidential and never shared.
+                </p>
               </form>
             )}
           </div>

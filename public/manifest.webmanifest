@@ -1,0 +1,26 @@
+{
+  "name": "Anes Đumišić — Computer Science & Agency Co-Founder",
+  "short_name": "Anes Đumišić",
+  "description": "Portfolio of Anes Đumišić — Computer Science student and co-founder of Mreza Studio and Metrika.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07080b",
+  "theme_color": "#07080b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

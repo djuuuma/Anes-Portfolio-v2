@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="favBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stopColor="#141c18" />
+      <stop offset="70%" stopColor="#070a08" />
+      <stop offset="100%" stopColor="#040504" />
+    </radialGradient>
+    <linearGradient id="favStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#4a775a" />
+      <stop offset="50%" stopColor="#2d5a3f" />
+      <stop offset="100%" stopColor="#1b3d2b" />
+    </linearGradient>
+    <linearGradient id="goldLetter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ffffff" />
+      <stop offset="60%" stopColor="#ede8df" />
+      <stop offset="100%" stopColor="#d5ccba" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shape -->
+  <rect width="512" height="512" rx="128" fill="url(#favBg)" />
+  <rect x="8" y="8" width="496" height="496" rx="120" fill="none" stroke="url(#favStroke)" stroke-width="12" opacity="0.8" />
+  
+  <!-- Stylized Serif Letter A -->
+  <path d="M 256 96 L 372 384 L 322 384 L 298 322 L 214 322 L 190 384 L 140 384 Z M 256 188 L 226 278 L 286 278 Z" fill="url(#goldLetter)" />
+  
+  <!-- Subtle Emerald Accent Diamond -->
+  <polygon points="256,66 264,78 256,90 248,78" fill="#4a775a" />
+</svg>

@@ -30,7 +30,8 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="relative z-10 w-full max-w-7xl mx-auto px-2 sm:px-6 flex flex-col items-center justify-center text-center translate-y-6 sm:translate-y-8 md:translate-y-10 lg:translate-y-12">
         <div className="relative w-full flex items-center justify-center select-none pointer-events-none">
           <h1 className="font-cinzel text-[4.8rem] xs:text-[5.5rem] sm:text-8xl md:text-9xl xl:text-[11rem] 2xl:text-[12.5rem] font-medium tracking-[0.14em] sm:tracking-[0.24em] uppercase leading-none hero-text-white">
-            {name}
+            <span className="sr-only">Anes Đumišić — Computer Science &amp; Agency Co-Founder</span>
+            <span aria-hidden="true">{name}</span>
           </h1>
         </div>
       </div>
