@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Bodoni Moda", "Playfair Display", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  .font-serif-luxury {
+    font-family: "Cinzel", "Bodoni Moda", "Playfair Display", Georgia, serif;
+    font-weight: 500;
+  }
+  .font-cinzel {
+    font-family: "Cinzel", serif;
+  }
+  .font-cormorant {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+  .font-italiana {
+    font-family: "Italiana", serif;
+  }
+  .font-editorial-serif {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+  .font-modern-sans {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+  
+  /* Clean solid white hero text with multi-layer drop shadow for crisp readability */
+  .hero-text-white {
+    color: #ffffff;
+    text-shadow: 
+      0 2px 10px rgba(0, 0, 0, 0.4),
+      0 8px 30px rgba(0, 0, 0, 0.5),
+      0 16px 50px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .luxury-emerald-sheen,
+  .luxury-gold-sheen {
+    background: linear-gradient(135deg, #a7f3d0 0%, #10b981 50%, #064e3b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Horizon vignette */
+  .hero-vignette {
+    background: linear-gradient(
+      to bottom,
+      rgba(7, 8, 11, 0.45) 0%,
+      rgba(7, 8, 11, 0.1) 16%,
+      transparent 32%,
+      transparent 68%,
+      rgba(7, 8, 11, 0.7) 85%,
+      rgba(7, 8, 11, 0.98) 100%
+    );
+  }
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07080b;
+}
+::-webkit-scrollbar-thumb {
+  background: #232834;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #394254;
+}
