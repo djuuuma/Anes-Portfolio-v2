@@ -13,6 +13,16 @@ export interface Project {
   year: string;
   href: string;
   image: string;
+  /** Headline campaign numbers shown under the project */
+  results?: { value: string; label: string }[];
+}
+
+export interface SideProject {
+  name: string;
+  line: string;
+  year: string;
+  href: string;
+  repo?: string;
 }
 
 export interface Venture {

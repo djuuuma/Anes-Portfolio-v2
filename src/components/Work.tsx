@@ -73,6 +73,18 @@ export const Work: React.FC<{ projects: Project[] }> = ({ projects }) => {
                 <span className="sm:hidden col-span-2 mt-2 text-sm text-neutral-500">
                   {p.kind} · {p.year}
                 </span>
+                {p.results && (
+                  <dl className="col-span-full mt-5 sm:mt-7 flex flex-wrap gap-x-10 sm:gap-x-16 gap-y-4">
+                    {p.results.map((r) => (
+                      <div key={r.label} className="flex flex-col-reverse">
+                        <dt className="mt-1 text-sm text-neutral-500">{r.label}</dt>
+                        <dd className="text-2xl sm:text-3xl tracking-[-0.03em] font-medium text-white tabular-nums">
+                          {r.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
                 {/* Touch screens get the screenshot inline instead of the cursor preview */}
                 <img
                   src={p.image}

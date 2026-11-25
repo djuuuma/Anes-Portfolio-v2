@@ -1,4 +1,4 @@
-import { Profile, Project, Venture, Milestone } from '../types/portfolio';
+import { Profile, Project, SideProject, Venture, Milestone } from '../types/portfolio';
 
 export const profile: Profile = {
   name: 'ANES',
@@ -16,11 +16,37 @@ export const profile: Profile = {
 };
 
 export const projects: Project[] = [
-  { name: 'Dr. SK Ordinacija', image: '/work/dr-sk.webp', kind: 'Dental clinic', year: '2024', href: 'https://dr-sk-ordinacija.vercel.app/' },
+  {
+    name: 'Auto Vodič',
+    image: '/work/autovodic.webp',
+    kind: 'Lead-gen funnel & ads',
+    year: '2026',
+    href: 'https://www.autovodic.ba/',
+    results: [
+      { value: '1.39 BAM', label: 'per lead, cold campaign' },
+      { value: '2.98 BAM', label: 'per qualified lead, warm campaign' },
+    ],
+  },
+  { name: 'Dr. Sanela Kapić', image: '/work/dr-sk.webp', kind: 'Dental clinic', year: '2024', href: 'https://dr-sk-ordinacija.vercel.app/' },
   { name: 'Foto Đumišić', image: '/work/foto-djumisic.webp', kind: 'Photo studio', year: '2024', href: 'https://foto-djumisic-v2.vercel.app/' },
   { name: 'MSN Design', image: '/work/msn-design.webp', kind: 'Print on glass & ceramics', year: '2024', href: 'https://msn-design.vercel.app/' },
-  { name: 'Zrno', image: '/work/zrno.webp', kind: 'Café menu', year: '2023', href: 'https://zrno-online-menu.vercel.app/' },
-  { name: 'Guerilla Intel', image: '/work/guerilla-intel.webp', kind: 'Game reference tool', year: '2023', href: 'https://smokovi-za-kanter.vercel.app/' },
+  { name: 'Zrno', image: '/work/zrno.webp', kind: 'Online café menu', year: '2023', href: 'https://zrno-online-menu.vercel.app/' },
+];
+
+export const sideProjects: SideProject[] = [
+  {
+    name: 'Study Timer',
+    line: 'Tracks study sessions by subject. Works offline, installs to the home screen, in English and Bosnian.',
+    year: '2026',
+    href: 'https://djuuuma.github.io/study-timer/',
+    repo: 'https://github.com/djuuuma/study-timer',
+  },
+  {
+    name: 'Guerilla Intel',
+    line: 'A quick reference tool for players of a game.',
+    year: '2023',
+    href: 'https://smokovi-za-kanter.vercel.app/',
+  },
 ];
 
 export const ventures: Venture[] = [
@@ -30,7 +56,7 @@ export const ventures: Venture[] = [
     partners: 'with Benjamin',
     role: 'Co-founder',
     line: 'Websites for businesses that care how they look and load.',
-    href: 'https://mrezastudio.com',
+    href: 'https://mreza-studio-master.vercel.app/?lang=bs',
   },
   {
     name: 'Metrika',
@@ -44,7 +70,7 @@ export const ventures: Venture[] = [
 
 export const milestones: Milestone[] = [
   { year: '2022', text: 'Started computer science. Handled inventory and data at FEF Export Import.' },
-  { year: '2023', text: 'First paid websites: a menu for Zrno and Guerilla Intel.' },
+  { year: '2023', text: 'First paid website: an online menu for Zrno. Built Guerilla Intel on the side.' },
   { year: '2024', text: 'Sites for a dental clinic, a photo studio and a print shop.' },
   { year: '2025', text: 'Started Mreza Studio with Benjamin.' },
   { year: '2026', text: 'Started Metrika with James and Edhem.' },
