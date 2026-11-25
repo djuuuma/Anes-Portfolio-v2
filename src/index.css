@@ -2,78 +2,26 @@
 
 @theme {
   --font-serif: "Cinzel", Georgia, serif;
-  --font-editorial: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-sans: "Mona Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "Mona Sans", system-ui, -apple-system, sans-serif;
 }
 
 @layer utilities {
-  /* Hero Monumental Font - strictly preserved */
   .font-cinzel {
     font-family: "Cinzel", serif;
   }
-
-  /* Rest of Website Headings & Accents: Modern, punchy, founder-driven display */
-  .font-serif-luxury {
-    font-family: "Mona Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-    letter-spacing: -0.025em;
-  }
-  .font-editorial-serif {
-    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-    letter-spacing: -0.015em;
-  }
   .font-modern-sans {
-    font-family: "Mona Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    font-family: "Mona Sans", system-ui, -apple-system, sans-serif;
   }
-  
-  /* Clean solid white hero text with multi-layer drop shadow for crisp readability */
+
+  /* Solid white hero text with layered shadow for readability over the photo */
   .hero-text-white {
     color: #ffffff;
-    text-shadow: 
+    text-shadow:
       0 2px 10px rgba(0, 0, 0, 0.4),
       0 8px 30px rgba(0, 0, 0, 0.5),
       0 16px 50px rgba(0, 0, 0, 0.3);
     user-select: none;
     -webkit-user-select: none;
-  }
-
-  /* ─── Aristocratic British Racing Green / Dark Pine Luxury Palette ────── */
-  .text-luxury-green {
-    color: #7ea88f;
-  }
-  .text-luxury-green-bright {
-    color: #92bba3;
-  }
-  .text-luxury-green-deep {
-    color: #4a775a;
-  }
-  .bg-luxury-green-dark {
-    background-color: #0b2216;
-  }
-  .border-luxury-green {
-    border-color: rgba(62, 107, 79, 0.45);
-  }
-  .bg-luxury-green-button {
-    background-color: #0e271a;
-    border: 1px solid rgba(74, 128, 95, 0.45);
-    color: #e5efe7;
-    box-shadow: 0 8px 24px rgba(4, 16, 10, 0.6);
-  }
-  .bg-luxury-green-button:hover {
-    background-color: #143524;
-    border-color: rgba(105, 168, 129, 0.65);
-    color: #ffffff;
-  }
-  .bg-luxury-green-badge {
-    background-color: rgba(11, 31, 20, 0.7);
-    border: 1px solid rgba(62, 107, 79, 0.35);
-    color: #8bb39a;
-  }
-
-  .luxury-emerald-sheen,
-  .luxury-gold-sheen {
-    background: linear-gradient(135deg, #a8cdb6 0%, #4f8061 50%, #1b3d29 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   /* Horizon vignette */
@@ -115,5 +63,87 @@ html {
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   body {
     padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+::selection {
+  background: #ffffff;
+  color: #07080b;
+}
+
+/* ─── Hero ─────────────────────────────────────────────── */
+.hero-photo {
+  transform: translateY(calc(var(--p, 0) * 16%)) scale(calc(1.05 + var(--p, 0) * 0.12));
+  filter: brightness(calc(1 - var(--p, 0) * 0.6));
+  will-change: transform, filter;
+}
+.hero-name {
+  transform: translateY(calc(var(--p, 0) * -35vh)) scale(calc(1 - var(--p, 0) * 0.12));
+  opacity: calc(1 - var(--p, 0) * 1.5);
+  will-change: transform, opacity;
+}
+.hero-cue {
+  opacity: calc(1 - var(--p, 0) * 5);
+}
+.hero-settle {
+  animation: hero-settle 2.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-letter {
+  display: inline-block;
+  animation: hero-letter 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes hero-settle {
+  from { transform: scale(1.12); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes hero-letter {
+  from { opacity: 0; transform: translateY(0.18em); filter: blur(14px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+
+/* ─── Intro word reveal: each word lights up as --p passes its --i ─── */
+.reveal-word {
+  opacity: clamp(0.14, calc((var(--p, 1) - var(--i)) * 12 + 0.14), 1);
+  transition: opacity 0.15s linear;
+}
+
+/* ─── Fade-up on enter ─── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--d, 0ms);
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Work cursor preview ─── */
+.work-preview {
+  transition: opacity 0.35s ease, scale 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-settle,
+  .hero-letter {
+    animation: none;
+  }
+  .hero-photo,
+  .hero-name {
+    transform: none;
+    filter: none;
+    opacity: 1;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
